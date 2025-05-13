@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+@tailwind utilities;
+
+
+body{
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+}
+@theme {
+   
+/* colors */
+    --color-primary: #1E1E50;
+    --color-secondary: #4F46E5;
+
+    --color-info: #DCFCE7;
+    --color-error: #E3676C;
+
+    --color-focus: #EEF2FF;
+    --color-hover: #3C35AD;
+
+    --color-neutral-900: #333232;
+    --color-neutral-800: #595959;
+    --color-neutral-700: #EBEBEB;
+    --color-neutral-600: #F0F0F0;
+
+    --color-alerta: #FFA000;
+    --color-error: #FF3B30;
+    --color-exito: #4CAF50;
+  }
