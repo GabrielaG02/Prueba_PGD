@@ -115,3 +115,7 @@ preview: sirve la build de producción localmente
 
 ## Hecho por 
 Sara Gabriela Garcia 
+
+
+![APP IMG ](imgReadme1.png)
+![APP IMG ](imgReadme2.png)
