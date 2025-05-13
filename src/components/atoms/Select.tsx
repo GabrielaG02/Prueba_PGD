@@ -8,17 +8,16 @@ export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
    */
   label?: string;
   /**
-   * Flag to apply error styles (red border and ring)
+   * Flag to apply error styles 
    */
   error?: boolean;
 }
 
 /**
- * Atomic Select component using Tailwind CSS v4
+ * Atomic Select component 
  *
  * - label: optional, renders a label element above the select
- * - error: applies error styles (red border, red focus ring)
- * - inherits all native HTML select attributes
+ * - error: applies error styles 
  */
 export const Select = forwardRef<HTMLSelectElement, SelectProps>(
   (

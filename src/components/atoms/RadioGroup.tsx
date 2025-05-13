@@ -1,21 +1,45 @@
-import  { forwardRef, type ChangeEventHandler, type FC } from 'react';
-import type { InputHTMLAttributes } from 'react';
+import {forwardRef,type FC,type ChangeEventHandler,type InputHTMLAttributes,} from 'react';
 import clsx from 'clsx';
 
+/**
+ * Props for the RadioGroup component
+ */
 export interface RadioGroupProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'value' | 'onChange'> {
-  /** Texto opcional encima del grupo */
+  extends Omit<
+    InputHTMLAttributes<HTMLInputElement>,
+    'size' | 'value' | 'onChange'
+  > {
+  /**
+   * Optional text displayed above the radio group
+   */
   label?: string;
-  /** Aplica estilos de error (anillo rojo) */
+  /**
+   * Applies error styling  when true
+   */
   error?: boolean;
-  /** Opciones del grupo */
+  /**
+   * Array of options to render; each with a value and label
+   */
   options: { value: string; label: string }[];
-  /** Valor seleccionado */
+  /**
+   * Currently selected value
+   */
   value: string;
-  /** Manejador de cambio */
+  /**
+   * Change event handler for the radio inputs
+   */
   onChange: ChangeEventHandler<HTMLInputElement>;
 }
 
+/**
+ * Atomic RadioGroup component 
+ *
+ * - Renders an optional label above the group
+ * - Maps `options` to a set of radios sharing the same `name`
+ * - Applies `error` styles when invalid
+ * - Forwards `ref` to the container `<div>`
+ * - Accepts all native input props (except size, value, onChange)
+ */
 export const RadioGroup: FC<RadioGroupProps> = forwardRef<
   HTMLDivElement,
   RadioGroupProps
@@ -36,11 +60,19 @@ export const RadioGroup: FC<RadioGroupProps> = forwardRef<
   ) => (
     <div ref={ref} className={clsx('flex flex-col', className)}>
       {label && (
-        <span id={name ? `${name}-label` : undefined} className="mb-1 font-medium text-gray-700">
+        <span
+          id={name ? `${name}-label` : undefined}
+          className="mb-1 font-medium text-gray-700"
+        >
           {label}
         </span>
       )}
-      <div role="radiogroup" aria-labelledby={label && name ? `${name}-label` : undefined} className="flex gap-6">
+
+      <div
+        role="radiogroup"
+        aria-labelledby={label && name ? `${name}-label` : undefined}
+        className="flex gap-6"
+      >
         {options.map((opt) => (
           <label key={opt.value} className="inline-flex items-center">
             <input

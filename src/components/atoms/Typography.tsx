@@ -5,7 +5,7 @@ import clsx from "clsx";
 export type TypographyVariant = "h1" | "h2" | "h3" | "body" | "caption";
 
 /**
- * Mapping from variants to default HTML tag and Tailwind classes
+ * Mapping from variants to default tag and classes
  */
 const variantMapping: Record<
   TypographyVariant,
@@ -26,7 +26,7 @@ export type TypographyProps<T extends ElementType = 'p'> = {
    */
   variant?: TypographyVariant;
   /**
-   * Override the default HTML tag
+   * Override the defaul tag
    */
   as?: T;
   /**
@@ -40,7 +40,7 @@ export type TypographyProps<T extends ElementType = 'p'> = {
 } & Omit<ComponentPropsWithoutRef<T>, 'className'>;
 
 /**
- * Polymorphic Typography component using Tailwind CSS v4
+ * Polymorphic Typography component
  *
  * - variant: selects predefined text styles
  * - as: override the rendered HTML element
@@ -71,7 +71,7 @@ const TypographyInner = forwardRef(
 ) => React.ReactElement;
 
 /**
- * Exported Typography component with proper displayName for React DevTools
+ * Exported Typography component with proper displayName 
  */
 export const Typography = TypographyInner as typeof TypographyInner & { displayName?: string };
 Typography.displayName = 'Typography';

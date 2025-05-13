@@ -1,12 +1,12 @@
 import { useState, useEffect, useMemo } from 'react';
-import { useCategories } from './useCategories';  // ← use named import, not default
+import { useCategories } from './useCategories';  
 import type { Document } from '../types/document';
 import type { DocumentFormValues } from '../components/organisms/DocumentForm';
 
 const STORAGE_KEY = 'documents';
 
 /**
- * Custom hook to manage documents with CRUD operations and persistence
+ * Custom hook to manage documents 
  *
  * - Loads and saves to localStorage
  * - Generates IDs and timestamps for new documents

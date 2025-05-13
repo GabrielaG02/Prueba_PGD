@@ -36,8 +36,8 @@ export const SubcategorySelect: React.FC<SubcategorySelectProps> = ({
 }) => (
   <Select
     label="Subcategoría"
-    title="Subcategoría"       // <-- ensures the <select> has an accessible name
-    id="subcategory-select"    // optionally provide a stable id for testing/label association
+    title="Subcategoría"       
+    id="subcategory-select"    
     value={value}
     onChange={(e) => onChange(e.target.value)}
     error={error}

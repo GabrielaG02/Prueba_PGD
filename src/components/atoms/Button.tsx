@@ -18,7 +18,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 /**
- * Atomic Button component using Tailwind CSS v4
+ * Atomic Button component 
  *
  * - variant: primary, secondary, info, or danger
  * - size: sm, md, or lg

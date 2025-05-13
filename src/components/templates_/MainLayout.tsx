@@ -13,7 +13,7 @@ export interface MainLayoutProps {
  *
  * - Sidebar on the left with navigation
  * - Header at the top of the main content area
- * - Responsive and uses Tailwind CSS v4
+ * - Responsive 
  */
 export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (

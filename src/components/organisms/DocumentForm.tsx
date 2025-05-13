@@ -19,7 +19,7 @@ import type {
  * Values for the DocumentForm
  */
 export interface DocumentFormValues {
-  id?: string; // optional for new documents
+  id?: string; 
   nombre: string;
   descripcion: string;
   categoria: Category | "";
