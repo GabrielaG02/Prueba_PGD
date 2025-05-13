@@ -13,8 +13,7 @@ Aplicación de una sola página en React + TypeScript para la gestión documenta
   - [Desarrollo](#desarrollo)  
   - [Build de producción](#build-de-producci%C3%B3n)  
 - [Scripts disponibles](#scripts-disponibles)  
-- [Contribuciones](#contribuciones)  
-- [Licencia](#licencia)  
+- [Hecho por ](#hecho-por)  
 
 ## Características
 
@@ -95,13 +94,13 @@ cd prueba-pgd
 npm install / yarn install
 
 
-## Desarrollo
+### Desarrollo
 
 bash
 npm run dev /yarn dev
 
 
-## Build de producción
+### Build de producción
 npm run build / yarn build
 
 npm run preview / yarn preview
